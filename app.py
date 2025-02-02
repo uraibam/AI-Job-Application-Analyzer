@@ -2,6 +2,11 @@ import streamlit as st
 from resume_parser import extract_resume_text
 from skill_matcher import match_skills
 import openai  # OpenAI API for AI-based suggestions
+import nltk
+
+# Ensure necessary NLTK data is downloaded
+nltk.download("punkt")
+nltk.download("stopwords")
 
 # OpenAI API Key (Replace with your key)
 openai.api_key = "YOUR_OPENAI_API_KEY"
